@@ -21,7 +21,7 @@ import {ref} from 'vue'
 import ButtonCloseMenuTools from './ButtonCloseMenuTools.vue';
 import neon from '../assets/img/tools/neon.png';
               const  neons = [
-                    {id: 0, imageSrc: krugina, body: 'НЕОН', ladel: 'neon', fonBlock: '#FFB524', fonRomb: 'rgba(37, 35, 32, 0.92)',
+                    {id: 0, imageSrc: neon, body: 'НЕОН', ladel: 'neon', fonBlock: '#FFB524', fonRomb: 'rgba(37, 35, 32, 0.92)',
                     info: 'Доступно 19 шт.'},
                     { id: 1, imageSrc: neon, body: 'НАЙМЕНУВАННЯ' },
                     { id: 2, imageSrc: neon, body: 'НАЙМЕНУВАННЯ' },
@@ -43,8 +43,6 @@ import neon from '../assets/img/tools/neon.png';
                     { id: 18, imageSrc: neon, body: 'НАЙМЕНУВАННЯ' },
                     { id: 19, imageSrc: neon, body: 'НАЙМЕНУВАННЯ' },
                 ];
-
-      
                 const list = ref(null); 
 
 const handleScroll = (event) => {

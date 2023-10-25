@@ -57,7 +57,7 @@ import uCef from '../cef';
                     {id: 10, imageSrc: krugina,  body: 'ГІДРАВЛІКА', label: 'krugina', sup: true},
                     {id: 11, imageSrc: vinil,  body: 'ВІНІЛИ', label: 'vinil', sup: true},
                     {id: 12, imageSrc: exhaust,  body: 'ВИХЛОПНА', label: 'exhaust', sup: true},
-                    {id: 13, imageSrc:neon,  body: 'НЕОН', label: 'neon', sup: true},
+                    {id: 13, imageSrc: neon,  body: 'НЕОН', label: 'neon', sup: true},
                     {id: 14, imageSrc: avtosvet,  body: 'КОЛІР ФАР', label: 'avtosvet', sup: true},
                     {id: 15, imageSrc: toning,  body: 'ТОНУВАННЯ', label: 'toning', sup: true},
                     {id: 16, imageSrc: colors,  body: 'RGB КОЛІР', label: 'rgb_colors', sup: true},

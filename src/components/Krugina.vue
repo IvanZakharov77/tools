@@ -43,8 +43,6 @@ import krugina from '../assets/img/tools/krugina.png';
                     { id: 18, imageSrc: krugina, body: 'НАЙМЕНУВАННЯ' },
                     { id: 19, imageSrc: krugina, body: 'НАЙМЕНУВАННЯ' },
                 ];
-
-      
                 const list = ref(null); 
 
 const handleScroll = (event) => {

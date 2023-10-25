@@ -7,6 +7,7 @@
       <Bumper v-if="changeButtonStore.markers === 'bumper'" />
       <Back_bump v-if="changeButtonStore.markers === 'back-bump'" />
       <Nitro v-if="changeButtonStore.markers === 'nitro'" />
+      <Neon v-if="changeButtonStore.markers === 'neon'" />
       <Pack v-if="changeButtonStore.markers === 'pack'" />
       <Spoiler v-if="changeButtonStore.markers === 'spoiler'" />
       <Krugina v-if="changeButtonStore.markers === 'krugina'" />
@@ -31,6 +32,7 @@ import Donat_t from './Donat_t.vue';
 import Bumper from './Bumper.vue';
 import Back_bump from './Back_bump.vue';
 import Nitro from './Nitro.vue';
+import Neon from './Neon.vue';
 import Pack from './Pack.vue';
 import Spoiler from './Spoiler.vue';
 import Krugina from './Krugina.vue';
