@@ -26,7 +26,7 @@ changeButtonStore = useChangeButtonStore();
     };
     const  sendingDataNameTool = () => {
         const store = useNameTool()
-        uCef.triggerEvent(store.sectionName, store.toolMarkerName)
+        uCef.triggerEvent('serviceStation:sendingSelection', store.sectionName, store.toolMarkerName)
     }
 </script>
 

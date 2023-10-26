@@ -7,7 +7,7 @@
             class="tools"
             @click="updateStoreText(tool)"
             :style="changeButtonStore.markers === 'painting' ? { backgroundColor: tool.fonBlock } : {}">
-            <li :class="{'unavailable' : tool.sup === false}">
+            <li :class="{'unavailable' : tool.sup != true}">
                     <div class="block-rhombus"
                     :style="changeButtonStore.markers === 'painting' ? { backgroundColor: tool.fonRomb } : {}">
                         <img class="img-tool" :src="tool.imageSrc" :style="{ width: tool.width }" :alt="tool.body">
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {ref, onMounted } from 'vue'
 import ButtonExit from './ButtonExit.vue';
 import balonAzot from '../assets/img/tools/balon.png';
 import hammer from '../assets/img/tools/hammer.png';
@@ -65,18 +65,28 @@ import uCef from '../cef';
 
                 const list = ref(null);
 
-const handleScroll = (event) => {
-  if (list.value) {
-    list.value.scrollLeft += event.deltaY;
-    event.preventDefault();
-  }
-};
+                const handleScroll = (event) => {
+                    if (list.value) {
+                        list.value.scrollLeft += event.deltaY;
+                        event.preventDefault();
+                    }
+                };
                 const updateStoreText = (marker) => {
-                const store = useChangeButtonStore();
-                store.markers = marker.label;
-                uCef.triggerEvent('tools:idToolCar', marker.label)
-            };
-            const changeButtonStore = useChangeButtonStore()
+                    const store = useChangeButtonStore();
+                    store.markers = marker.label;
+                    uCef.triggerEvent('serviceStation:eventSelectedInstrument', marker.label)
+                };
+                const changeButtonStore = useChangeButtonStore()
+
+                onMounted(() => {
+                    uCef.addEvent('serviceStation:checkingButtons', (arrLockedBtns) => {
+                        tools.forEach(tool => {
+                            if (arrLockedBtns.includes(tool.label)) {
+                                tool.sup = false;
+                            }
+                        });
+                    });
+                });
 </script>
 
 <style scoped>

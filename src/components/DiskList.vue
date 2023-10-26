@@ -84,7 +84,12 @@ const handleScroll = (event) => {
     event.preventDefault();
   }
 };
-
+// отправка выбранного инструмента (не привязано так как нет названий инструментов)
+const selectTool = (colorName) => {
+  const sendNameColor = useNameTool();
+  sendNameColor.sectionName = 'serviceStation:tools:######';
+  sendNameColor.toolMarkerName = colorName;
+};
 </script>
 
 <style scoped>

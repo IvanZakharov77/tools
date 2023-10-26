@@ -11,7 +11,7 @@
                     <li v-for="color in colorsList" :key="color.id">
                         <div class="blocks-color" :style="{ background: color.colorName }"
                         :class="{ 'selected': isSelectedColor(color.id) }"
-                        @click="selectColor(color.colorName)"
+                        @click="selectTool(color.colorName)"
                         ></div>
                     </li>
                 </ul>
@@ -55,9 +55,9 @@ const isSelectedColor = computed(() => {
   return (colorId) => selectedColorIndex.value === colorId;
 });
 
-const selectColor = (colorName) => {
+const selectTool = (colorName) => {
   const sendNameColor = useNameTool();
-  sendNameColor.sectionName = 'tools:nameColor';
+  sendNameColor.sectionName = 'serviceStation:tools:nameColor';
   sendNameColor.toolMarkerName = colorName;
 };
 </script>
